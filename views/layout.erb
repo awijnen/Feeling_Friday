@@ -3,21 +3,24 @@
 <head>  
   <meta charset="utf8">  
   <title><%= @title + ' | Recall' %></title>  
-  <link href="/reset.css" rel="stylesheet">  
-  <link href="/style.css" rel="stylesheet">  
+  <link href="reset.css" rel="stylesheet">  
+  <link href="style.css" rel="stylesheet">  
 </head>  
 <body>  
   <header>  
     <hgroup>  
-      <h1><a href="/">Recall</a></h1>  
-      <h2>'cause you're too busy to remember</h2>  
+      <h1><a href="/">Feeling Friday</a></h1>  
+      <h2>'cause we're an emotional bunch</h2>  
     </hgroup>  
   </header>  
   <div id="main">  
     <%= yield %>  
+    <br>
+    <form classaction="/migrate">Remove all this Emotional Crap!  <input type="submit" name="Submit"></form>
   </div>  
+  
   <footer>  
-    <p><small>An app for <a href="http://net.tutsplus.com">Nettuts+</a>.</small></p>  
+    <p><small>An app for the <a href="http://students.flatironschool.com/">Students of the Flatiron School</a>.</small></p> 
   </footer>  
 </body>  
 </html>  

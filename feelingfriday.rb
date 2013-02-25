@@ -1,8 +1,12 @@
 require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
+require 'dm-postgres-adapter'
 
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/recall.db") # setup new sqlite3 database
+ 
+ENV['DATABASE_URL'] ||= 'postgres://Anthony:@localhost/flatironfriday_app'
+ 
+DataMapper.setup(:default, ENV['DATABASE_URL']) # setup new postgres database
 
 class Note
   include DataMapper::Resource
@@ -14,7 +18,6 @@ class Note
   property :complete, Boolean, :required => true, :default => false
   property :created_at, DateTime
   property :updated_at, DateTime
-
 end
 
 DataMapper.finalize.auto_upgrade! # automatically update the database to contain the tables and fields we have set, and to do so again if we make any changes to the schema
@@ -31,6 +34,11 @@ post '/' do
   n.created_at = Time.now
   n.updated_at = Time.new
   n.save
+  redirect '/'
+end
+
+get '/migrate' do
+  DataMapper.auto_migrate!
   redirect '/'
 end
 
