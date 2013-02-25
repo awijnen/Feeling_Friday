@@ -29,7 +29,7 @@ post '/' do
   n = Note.new
   n.content = params[:content]
   n.created_at = Time.now
-  n.updated_at = Time.new
+  n.updated_at = Time.now
   n.save
   redirect '/'
 end
