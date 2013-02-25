@@ -41,8 +41,8 @@ header h2 {
     border: 1px solid #ddd;  
     background: white;  
 }  
-input#remove_button {
-    margin-left: 10px;
+p#remove a {
+    margin-left: 5px;
 }
 
 #edit textarea {  
