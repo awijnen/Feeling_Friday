@@ -3,10 +3,7 @@ require 'sinatra'
 require 'data_mapper'
 require 'dm-postgres-adapter'
 
- 
-ENV['DATABASE_URL'] ||= 'postgres://Anthony:@localhost/flatironfriday_app'
- 
-DataMapper.setup(:default, ENV['DATABASE_URL']) # setup new postgres database
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
 class Note
   include DataMapper::Resource
@@ -17,7 +14,7 @@ class Note
   property :content, Text, :required => true
   property :complete, Boolean, :required => true, :default => false
   property :created_at, DateTime
-  property :updated_at, DateTime
+  property :updated_at, DateTim
 end
 
 DataMapper.finalize.auto_upgrade! # automatically update the database to contain the tables and fields we have set, and to do so again if we make any changes to the schema
