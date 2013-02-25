@@ -1,7 +1,7 @@
 body {  
     margin: 35px auto;  
     width: 640px;
-    background-image:url('/images/newyork.jpg'); 
+    /*background-image:url('/images/newyork.jpg'); */
 }  
 header {  
     text-align: center;  
@@ -66,7 +66,11 @@ article:first-of-type {
 }  
 article:nth-child(even) {  
     background: #fafafa;  
-}  
+}
+article:nth-child(odd) {  
+    background: #fafafa;  
+}
+
 article.complete {  
     background: #fedae3;  
 }  
