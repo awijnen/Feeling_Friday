@@ -21,7 +21,8 @@ header h2 {
     color: #999;  
 }  
 #main {  
-    margin: 0 0 20px;  
+    margin: 0 0 20px;
+    border: 1px solid black;  
 }  
 #add {  
     margin: 0 0 20px;  
