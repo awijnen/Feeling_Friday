@@ -1,7 +1,7 @@
 body {  
     margin: 35px auto;  
     width: 640px;
-    /*background-image:url('/images/newyork.jpg'); */
+    background-image:url('/images/newyork.jpg'); 
 }  
 header {  
     text-align: center;  
@@ -23,7 +23,8 @@ header h2 {
 #main {  
     margin: 0 0 20px;
     border: 1px solid black;
-    padding: 10px 20px 20px 20px;  
+    padding: 10px 20px 20px 20px;
+    background-color: #000;  
 }  
 #add {  
     margin: 0 0 20px;  
