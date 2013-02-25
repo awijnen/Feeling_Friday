@@ -77,10 +77,7 @@ article:nth-child(even) {
 article:nth-child(odd) {  
     background: #fafafa;  
 }
-
-article.complete {  
-    background: #fedae3;  
-}  
+  
 article span {  
     font-size: 0.8em;  
 }  
