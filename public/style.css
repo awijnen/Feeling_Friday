@@ -47,10 +47,11 @@ p.remove a {
 
 #edit textarea {  
     height: 30px;  
-    width: 474px;  
+    width: 450px;  
     padding: 10px;  
     border: 1px solid #ddd;  
 }  
+
 #edit input[type=submit] {  
     height: 50px;  
     width: 100px;  
