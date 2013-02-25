@@ -41,7 +41,7 @@ header h2 {
     border: 1px solid #ddd;  
     background: white;  
 }  
-p#remove a {
+p.remove a {
     margin-left: 5px;
 }
 
@@ -100,4 +100,9 @@ p {
 .links a {  
     display: block;  
     text-decoration: none;  
+}
+
+footer {
+    background-color: #ddd;
+    padding: 10px 10px;
 }
