@@ -41,9 +41,13 @@ header h2 {
     border: 1px solid #ddd;  
     background: white;  
 }  
+input#remove_button {
+    margin-left: 10px;
+}
+
 #edit textarea {  
     height: 30px;  
-    width: 480px;  
+    width: 400px;  
     padding: 10px;  
     border: 1px solid #ddd;  
 }  
