@@ -14,7 +14,7 @@ class Note
   property :content, Text, :required => true
   property :complete, Boolean, :required => true, :default => false
   property :created_at, DateTime
-  property :updated_at, DateTim
+  property :updated_at, DateTime
 end
 
 DataMapper.finalize.auto_upgrade! # automatically update the database to contain the tables and fields we have set, and to do so again if we make any changes to the schema
