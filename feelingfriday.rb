@@ -21,7 +21,7 @@ DataMapper.finalize.auto_upgrade! # automatically update the database to contain
 
 get '/' do
   @notes = Note.all :order => :id.desc
-  @title = "All Notes"
+  @title = "All Emotions"
   erb :home
 end
 
