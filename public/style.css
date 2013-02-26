@@ -41,6 +41,10 @@ header h2 {
     border: 1px solid #ddd;  
     background: white;  
 }  
+p.remove {
+    display: none;
+}
+
 p.remove a {
     margin-left: 5px;
 }
