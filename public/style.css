@@ -28,24 +28,26 @@ header h2 {
 }  
 #main {  
     margin: 0 0 20px;
-    padding: 10px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     background-color: #ddd;  
 }  
 #add {  
     margin: 0 0 20px;  
 }  
 #add textarea {  
-    height: 29px;  
+    height: 28px; 
     width: 534px;  
+    max-width: 534px;  
     padding: 10px;  
     border: 1px solid #ddd;  
+    background-color: #fafafa;
 }  
 #add input {  
     height: 50px;  
     width: 100px;  
-    margin: -45px 0 0;  
+    margin: -44px 0 0;  
     border: 1px solid #ddd;  
-    background: white;  
+    background: #fafafa;  
 }  
 p.remove {
     display: none;
