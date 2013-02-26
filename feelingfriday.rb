@@ -15,6 +15,19 @@ class Note
   property :complete, Boolean, :required => true, :default => false
   property :created_at, DateTime
   property :updated_at, DateTime
+
+  has n, :comments
+end
+
+class Comment
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :content, Text
+  property :created_at, DateTime
+  property :updated_at, DateTime
+
+  belongs_to :note
 end
 
 DataMapper.finalize.auto_upgrade! # automatically update the database to contain the tables and fields we have set, and to do so again if we make any changes to the schema
@@ -72,6 +85,16 @@ get '/:id/complete' do
   n.updated_at = Time.now  
   n.save  
   redirect '/'  
-end 
+end
+
+post '/comment' do
+  p params['id'], params['content']
+  note = Note.get(params['id'])
+  comment = Comment.new
+  comment.content = params['content']
+  note.comments << comment
+  note.save
+  redirect '/'
+end
 
 

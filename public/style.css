@@ -1,7 +1,7 @@
 body {  
     margin: 35px auto;  
-    width: 640px;
-    background-image:url('/images/newyork.jpg'); 
+    width: 700px;
+    background:url('/images/newyork.jpg') no-repeat fixed;
 }  
 header {  
     text-align: center;  
@@ -29,8 +29,8 @@ header h2 {
     margin: 0 0 20px;  
 }  
 #add textarea {  
-    height: 30px;  
-    width: 474px;  
+    height: 29px;  
+    width: 534px;  
     padding: 10px;  
     border: 1px solid #ddd;  
 }  
@@ -98,6 +98,19 @@ p {
 .links a {  
     display: block;  
     text-decoration: none;  
+}
+
+.form-toggle {
+    cursor: pointer;
+}
+
+.comments {
+    background: #eee;
+    padding: 15px;
+}
+
+.comments form {
+    padding-bottom: 10px;
 }
 
 footer {

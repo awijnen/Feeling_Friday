@@ -10,7 +10,23 @@
       <%= note.content %>  
       <span><a href="/<%= note.id %>">[edit]</a></span>  
     </p>   
-    <p class="meta">Created: <%= note.created_at %></p>  
+    <p class="meta">Created: <%= note.created_at.strftime('%A, %d %b %y') %></p>
+    <% if note.comments %>
+    <div class="comments">
+    <a onclick="toggleForm(this, <%= note.id %>)" class="form-toggle">comment</a>
+      <form action="/comment" method="post" id="comment-form-<%= note.id %>" style="display: none;">
+        <input name="content" size="34" placeholder="Your deepest response to deep emotion&hellip;"></input>
+        <input name="id" type="text" style="display: none;" value="<%= note.id %>"></input>
+        <input type="submit" value="Comment">
+      </form>
+        <% for comment in note.comments %>
+        <p>
+          <%= comment.content %>
+          <p class="meta">Created: <%= comment.created_at.strftime('%d %b - %H:%M') %></p>
+        </p>
+        <% end %>
+    </div>
+      <% end %>
   </article>
   <br>
 <% end %> 
