@@ -114,7 +114,15 @@ p {
 }
 
 .comments form {
-    padding-bottom: 10px;
+    padding: 10px 0;
+}
+
+.comments form input {
+    border: none;
+}
+
+.comments form button {
+    padding: 2px;
 }
 
 footer {
