@@ -38,7 +38,7 @@ get '/' do
   erb :home
 end
 
-post '/post' do
+post '/' do
   n = Note.new
   n.content = params[:content]
   n.created_at = Time.now
