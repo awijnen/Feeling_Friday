@@ -1,4 +1,13 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/raleway/v6/8KhZd3VQBtXTAznvKjw-k73hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
 body {  
+    font-family: 'Raleway';
+    font-size: 11pt;
     margin: 35px auto;  
     width: 700px;
     background:url('/images/newyork.jpg') no-repeat fixed;
@@ -7,7 +16,13 @@ body {
 header {  
     text-align: center;  
     margin: 0 0 20px;  
-}  
+} 
+
+header a#github{
+    position: fixed; top: 0;
+    right: 0;
+    border: 0;
+} 
 
 img {
   max-width: 100%;
@@ -22,30 +37,33 @@ header h1 a:link, header h1 a:visited {
     text-decoration: none;  
 }  
 header h2 {  
-    font-size: 16px;  
+    font-size: 16px;
+    font-weight: normal;
     font-style: italic;  
     color: #999;  
 }  
 #main {  
     margin: 0 0 20px;
-    padding: 10px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     background-color: #ddd;  
 }  
 #add {  
     margin: 0 0 20px;  
 }  
 #add textarea {  
-    height: 29px;  
+    height: 28px; 
     width: 534px;  
+    max-width: 534px;  
     padding: 10px;  
     border: 1px solid #ddd;  
+    background-color: #fafafa;
 }  
 #add input {  
     height: 50px;  
     width: 100px;  
-    margin: -45px 0 0;  
+    margin: -41px 0 0;  
     border: 1px solid #ddd;  
-    background: white;  
+    background: #fafafa;  
 }  
 p.remove {
     display: none;
@@ -74,9 +92,9 @@ p.remove a {
     width: 20px;  
 }  
 article {  
-    border: 1px solid #eee;  
-    border-top: none;  
-    padding: 15px 10px;  
+    border: 1px solid #eee;   
+    padding: 12px 12px 12px 12px; 
+    margin: 15px 0 15px 0; 
 }  
 article:first-of-type {  
     border: 1px solid #eee;  
@@ -91,9 +109,20 @@ article:nth-child(odd) {
 article span {  
     font-size: 0.8em;  
 }  
+article .comments{
+    margin-top:11px;
+}
 p {  
     margin: 0 0 5px;  
-}  
+} 
+
+p.note-content{
+    font-size: 1.1em;
+} 
+
+p.comment-content{
+    font-size : 1em;
+}
 .meta {  
     font-size: 0.8em;  
     font-style: italic;  
@@ -109,14 +138,26 @@ p {
     display: block;  
     text-decoration: none;  
 }
-
+form textarea, form input{
+    font-family: 'Raleway';
+}
+form input[type="submit"]{
+    font-size:0.9em;
+}
 .form-toggle {
     cursor: pointer;
+    font-size: 1em;
 }
 
 .comments {
     background: #eee;
     padding: 15px;
+}
+
+.comments .comment{
+    border-bottom: 1px dotted #ddd ;
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
 }
 
 .comments form {
