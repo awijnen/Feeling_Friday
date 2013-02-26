@@ -3,10 +3,16 @@ body {
     width: 700px;
     background:url('/images/newyork.jpg') no-repeat fixed;
 }  
+
 header {  
     text-align: center;  
     margin: 0 0 20px;  
 }  
+
+img {
+  max-width: 100%;
+}
+
 header h1 {  
     display: inline;  
     font-size: 32px;  
