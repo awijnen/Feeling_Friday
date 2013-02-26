@@ -4,30 +4,40 @@
     <input type="submit" value="Save emotion">
   </form>
 </section>
+
+<section id="notes">
 <% @notes.each do |note| %>  
   <article>  
-    <p>  
+    <p class = "note-content">  
       <%= note.content %>  
       <span><a href="/<%= note.id %>">[edit]</a></span>  
     </p>   
+    
     <p class="meta">Created: <%= note.created_at.strftime('%A, %d %b %y') %></p>
     <% if note.comments %>
+      
     <div class="comments">
-        <% for comment in note.comments %>
-        <p>
+    <% for comment in note.comments %>
+      <div class="comment">
+        <p class = "comment-content">
           <%= comment.content %>
-          <p class="meta">Created: <%= comment.created_at.strftime('%d %b - %H:%M') %></p>
         </p>
-        <% end %>
+        <p class="meta">
+          Created: <%= comment.created_at.strftime('%d %b - %H:%M') %>
+        </p>
+      </div>
+    <% end %>
       <form action="/comment" method="post" id="comment-form-<%= note.id %>" style="display: none;">
         <input name="content" size="34" placeholder="Your deepest response to deep emotion&hellip;"></input>
         <input name="id" type="text" style="display: none;" value="<%= note.id %>"></input>
         <input type="submit" value="Comment">
       </form>
-    <a onclick="toggleForm(this, <%= note.id %>)" class="form-toggle">comment</a>
+      <a onclick="toggleForm(this, <%= note.id %>)" class="form-toggle">comment</a>
     </div>
-      <% end %>
+    <% end %>
   </article>
-  <br>
-<% end %> 
+  <% end %> 
+</section>
+
+
 <p class="remove">Remove all this Emotional Crap!<a href='/migrate'><input type="submit" name="Submit"></a></p>
