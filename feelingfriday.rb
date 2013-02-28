@@ -47,10 +47,10 @@ post '/post' do
   redirect '/'
 end
 
-get '/migrate' do
-  DataMapper.auto_migrate!
-  redirect '/'
-end
+# get '/migrate' do
+#   DataMapper.auto_migrate!
+#   redirect '/'
+# end
 
 get '/:id' do  
   @note = Note.get params[:id]  
